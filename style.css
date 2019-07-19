@@ -1,6 +1,2 @@
-#main{
-    color : blue;
-}
-tr{
-    border-block-style: solid;
-}
+table { border-collapse: collapse; }
+tr { border: solid thin; }

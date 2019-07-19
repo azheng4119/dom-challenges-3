@@ -9,3 +9,12 @@ let addRow = () => {
 let removeRow = () => {
     let listOfTr = document.getElementById('main').lastChild.remove();
 }
+
+let fillAll = () => {
+    let listOfTr = document.getElementsByTagName('td');
+    for ( let i = 0; i < listOfTr.length; i++){
+        listOfTr[i].style.backgroundColor = "blue";
+    }
+}
+
+//style.backgroundColor = "blue";
