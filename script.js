@@ -10,6 +10,7 @@ let addRow = () => {
     }else{
         for (let i = 0; i < listOfTr[0].getElementsByTagName('td').length; i++){
             let tempTd = document.createElement('td');
+            tempTd.setAttribute("id", "cell");
             tempTd.width = "50px";
             tempTd.height = "50px";
             tempTr.append(tempTd);
@@ -29,6 +30,7 @@ let addColumn = () =>{
     }else{
         for ( let i = 0; i < listOfTr.length; i++){
             let tempTd = document.createElement('td');
+            tempTd.setAttribute("id", "cell");
             tempTd.width = "50px";
             tempTd.height = "50px";
             listOfTr[i].append(tempTd);
@@ -52,7 +54,11 @@ let fillAll = () => {
 
 //style.backgroundColor = "blue";
 
-function mouseColor() {
-    let listOfTr = document.getElementsByTagName('td');
-    listOfTr.backgroundColor = "blue";
-}
+// function mouseColor() {
+//     let listOfTr = document.getElementsID("cell");
+    
+//     for(let i = 0; i < listOfTr.length; i++)  {
+//         listOfTr[i].style.backgroundColor = "blue";
+//     }
+    
+// }

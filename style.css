@@ -19,13 +19,27 @@ h2 {
     font-size: 40px;
 }
 
+button {
+    font-size: 15px;
+}
+
+.button {
+    text-align: center;
+}
+select {
+    font-size: 15px;
+}
+
 table { 
     border-collapse: collapse; 
 }
-
 
 td { 
     border: solid thin; 
     background-color: whitesmoke;
     
+}
+
+td:hover {
+    background-color: blue;
 }
