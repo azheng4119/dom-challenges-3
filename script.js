@@ -1,10 +1,20 @@
 let addRow = () => {
     let tempTr = document.createElement('tr');
-    let tempTd = document.createElement('td');
-    
-    tempTd.width = "50px";
-    tempTd.height = "50px";
-    tempTr.append(tempTd);
+    let listOfTr = document.getElementsByTagName('tr');
+    if (listOfTr.length === 0){
+        let tempTd = document.createElement('td');
+        
+        tempTd.width = "50px";
+        tempTd.height = "50px";
+        tempTr.append(tempTd);
+    }else{
+        for (let i = 0; i < listOfTr[0].getElementsByTagName('td').length; i++){
+            let tempTd = document.createElement('td');
+            tempTd.width = "50px";
+            tempTd.height = "50px";
+            tempTr.append(tempTd);
+        }
+    }
     document.getElementById('main').append(tempTr);
 }
 
@@ -14,12 +24,17 @@ let removeRow = () => {
 
 let addColumn = () =>{
     let listOfTr = document.getElementsByTagName('tr');
-    for ( let i = 0; i < listOfTr.length; i++){
-        let tempTd = document.createElement('td');
-        tempTd.width = "50px";
-        tempTd.height = "50px";
-        listOfTr[i].append(tempTd);
+    if (listOfTr.length === 0){
+        addRow();
+    }else{
+        for ( let i = 0; i < listOfTr.length; i++){
+            let tempTd = document.createElement('td');
+            tempTd.width = "50px";
+            tempTd.height = "50px";
+            listOfTr[i].append(tempTd);
+        }
     }
+
 }
 
 let removeColumn = () => {
