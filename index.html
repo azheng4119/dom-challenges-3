@@ -13,7 +13,9 @@
         <link rel="stylesheet" href="style.css">
         <script src = "script.js"></script>
     </head>
-    <body>
+    <body style="background-color:black;">
+        <div class = "title"><h2>Pixelate</h2></div>
+        
         <button onclick = "addRow()">add row</button>
         <button onclick = "removeRow()">remove row</button>
         <button onclick = "addColumn()">add column</button>
@@ -27,8 +29,8 @@
             <option value = "2">blue</option>
         </select> 
         <br></br>
-        <table id = "main">
-
+        <table id = "main" onmouseover="mouseColor()">
+            
         </table>      
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>

@@ -52,3 +52,7 @@ let fillAll = () => {
 
 //style.backgroundColor = "blue";
 
+function mouseColor() {
+    let listOfTr = document.getElementsByTagName('td');
+    listOfTr.backgroundColor = "blue";
+}
