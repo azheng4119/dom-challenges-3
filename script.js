@@ -1,7 +1,9 @@
 let addRow = () => {
     let tempTr = document.createElement('tr');
     let tempTd = document.createElement('td');
-    tempTd.innerHTML = "row";
+    
+    tempTd.width = "50px";
+    tempTd.height = "50px";
     tempTr.append(tempTd);
     document.getElementById('main').append(tempTr);
 }
@@ -14,7 +16,8 @@ let addColumn = () =>{
     let listOfTr = document.getElementsByTagName('tr');
     for ( let i = 0; i < listOfTr.length; i++){
         let tempTd = document.createElement('td');
-        tempTd.innerHTML = "row";
+        tempTd.width = "50px";
+        tempTd.height = "50px";
         listOfTr[i].append(tempTd);
     }
 }
@@ -33,3 +36,4 @@ let fillAll = () => {
 }
 
 //style.backgroundColor = "blue";
+
