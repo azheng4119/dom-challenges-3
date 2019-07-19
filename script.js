@@ -21,11 +21,16 @@ let removeRow = () => {
 
 let addColumn = () =>{
     let listOfTr = document.getElementsByTagName('tr');
-    for ( let i = 0; i < listOfTr.length; i++){
-        let tempTd = document.createElement('td');
-        tempTd.innerHTML = "row";
-        listOfTr[i].append(tempTd);
+    if (listOfTr.length === 0){
+        addRow();
+    }else{
+        for ( let i = 0; i < listOfTr.length; i++){
+            let tempTd = document.createElement('td');
+            tempTd.innerHTML = "row";
+            listOfTr[i].append(tempTd);
+        }
     }
+
 }
 
 let removeColumn = () => {
