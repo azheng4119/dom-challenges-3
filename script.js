@@ -1,8 +1,17 @@
 let addRow = () => {
     let tempTr = document.createElement('tr');
-    let tempTd = document.createElement('td');
-    tempTd.innerHTML = "row";
-    tempTr.append(tempTd);
+    let listOfTr = document.getElementsByTagName('tr');
+    if (listOfTr.length === 0){
+        let tempTd = document.createElement('td');
+        tempTd.innerHTML = "row";
+        tempTr.append(tempTd);
+    }else{
+        for (let i = 0; i < listOfTr[0].getElementsByTagName('td').length; i++){
+            let tempTd = document.createElement('td');
+            tempTd.innerHTML = "row";
+            tempTr.append(tempTd);
+        }
+    }
     document.getElementById('main').append(tempTr);
 }
 
