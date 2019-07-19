@@ -10,6 +10,21 @@ let removeRow = () => {
     let listOfTr = document.getElementById('main').lastChild.remove();
 }
 
+let addColumn = () =>{
+    let listOfTr = document.getElementsByTagName('tr');
+    for ( let i = 0; i < listOfTr.length; i++){
+        let tempTd = document.createElement('td');
+        tempTd.innerHTML = "row";
+        listOfTr[i].append(tempTd);
+    }
+}
+
+let removeColumn = () => {
+    let listOfTr = document.getElementsByTagName('tr');
+    for ( let i = 0; i < listOfTr.length; i++){
+        listOfTr[i].lastChild.remove();
+    }
+}
 let fillAll = () => {
     let listOfTr = document.getElementsByTagName('td');
     for ( let i = 0; i < listOfTr.length; i++){
