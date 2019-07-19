@@ -13,22 +13,26 @@
         <link rel="stylesheet" href="style.css">
         <script src = "script.js"></script>
     </head>
-    <body>
-        <button onclick = "addRow()">add row</button>
-        <button onclick = "removeRow()">remove row</button>
-        <button onclick = "addColumn()">add column</button>
-        <button onclick = "removeColumn()">remove column</button>
-        <button>clear</button>
-        <button onclick="fillAll()">fill all</button>
-        <button>fill something else</button>
-        <select id = "colordrop">
-            <option value = "0">red</option>
-            <option value = "1">black</option>
-            <option value = "2">blue</option>
-        </select> 
+    <body style="background-color:black;">
+        <div class = "title"><h2>Pixelate</h2></div>
+        <div class = "button">
+            <button onclick = "addRow()">add row</button>
+            <button onclick = "removeRow()">remove row</button>
+            <button onclick = "addColumn()">add column</button>
+            <button onclick = "removeColumn()">remove column</button>
+            <button>clear</button>
+            <button onclick="fillAll()">fill all</button>
+            <button>fill something else</button>
+        
+            <select id = "colordrop">
+                <option value = "0">red</option>
+                <option value = "1">black</option>
+                <option value = "2">blue</option>
+            </select> 
+        </div>
         <br></br>
-        <table id = "main">
-
+        <table id = "main" onmouseover="mouseColor()" align="center">
+            
         </table>      
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
