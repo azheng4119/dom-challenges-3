@@ -3,20 +3,29 @@ let addRow = () => {
     let listOfTr = document.getElementsByTagName('tr');
     if (listOfTr.length === 0){
         let tempTd = document.createElement('td');
-        
+        tempTd.setAttribute("id", "cell");
         tempTd.width = "50px";
         tempTd.height = "50px";
+        tempTd.addEventListener("mouseover", function() {
+            this.style.backgroundColor = "blue";
+        });
+        
         tempTr.append(tempTd);
+        
     }else{
         for (let i = 0; i < listOfTr[0].getElementsByTagName('td').length; i++){
             let tempTd = document.createElement('td');
             tempTd.setAttribute("id", "cell");
             tempTd.width = "50px";
             tempTd.height = "50px";
-            tempTr.append(tempTd);
+            tempTd.addEventListener("mouseover", function() {
+                this.style.backgroundColor = "blue";
+            });
+            tempTr.append(tempTd);   
         }
     }
     document.getElementById('main').append(tempTr);
+  
 }
 
 let removeRow = () => {
@@ -33,6 +42,9 @@ let addColumn = () =>{
             tempTd.setAttribute("id", "cell");
             tempTd.width = "50px";
             tempTd.height = "50px";
+            tempTd.addEventListener("mouseover", function() {
+                this.style.backgroundColor = "blue";
+            });
             listOfTr[i].append(tempTd);
         }
     }
@@ -52,13 +64,3 @@ let fillAll = () => {
     }
 }
 
-//style.backgroundColor = "blue";
-
-// function mouseColor() {
-//     let listOfTr = document.getElementsID("cell");
-    
-//     for(let i = 0; i < listOfTr.length; i++)  {
-//         listOfTr[i].style.backgroundColor = "blue";
-//     }
-    
-// }
