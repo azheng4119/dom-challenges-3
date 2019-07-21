@@ -20,14 +20,14 @@
             <button onclick = "removeRow()">remove row</button>
             <button onclick = "addColumn()">add column</button>
             <button onclick = "removeColumn()">remove column</button>
-            <button>clear</button>
-            <button onclick="fillAll()">fill all</button>
-            <button>fill something else</button>
+            <button onclick = "fillAll('whitesmoke')">clear</button>
+            <button onclick = "fillAll(document.getElementById('colordrop').value)">fill all</button>
+            <button onclick = "fillUnColored()">fill uncolored</button>
         
             <select id = "colordrop">
-                <option value = "0">red</option>
-                <option value = "1">black</option>
-                <option value = "2">blue</option>
+                <option value = "red">red</option>
+                <option value = "black">black</option>
+                <option value = "blue">blue</option>
             </select> 
         </div>
         <br></br>
