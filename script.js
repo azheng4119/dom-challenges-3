@@ -7,7 +7,12 @@ let addRow = () => {
         tempTd.width = "50px";
         tempTd.height = "50px";
         tempTd.addEventListener("mouseover", function() {
-            this.style.backgroundColor = "blue";
+            if(this.style.backgroundColor == "blue") {
+                this.style.backgroundColor = "whitesmoke";
+            }
+            else {
+                this.style.backgroundColor = "blue";
+            }
         });
         
         tempTr.append(tempTd);
@@ -19,7 +24,12 @@ let addRow = () => {
             tempTd.width = "50px";
             tempTd.height = "50px";
             tempTd.addEventListener("mouseover", function() {
-                this.style.backgroundColor = "blue";
+                if(this.style.backgroundColor == "blue") {
+                    this.style.backgroundColor = "whitesmoke";
+                }
+                else {
+                    this.style.backgroundColor = "blue";
+                }
             });
             tempTr.append(tempTd);   
         }
@@ -43,7 +53,12 @@ let addColumn = () =>{
             tempTd.width = "50px";
             tempTd.height = "50px";
             tempTd.addEventListener("mouseover", function() {
-                this.style.backgroundColor = "blue";
+                if(this.style.backgroundColor == "blue") {
+                    this.style.backgroundColor = "whitesmoke";
+                }
+                else {
+                    this.style.backgroundColor = "blue";
+                }
             });
             listOfTr[i].append(tempTd);
         }
@@ -63,4 +78,3 @@ let fillAll = () => {
         listOfTr[i].style.backgroundColor = "blue";
     }
 }
-
